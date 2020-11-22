@@ -6,24 +6,55 @@
 <p>or <a href="https://spain.thecatcloud.de">Spain.TheCatCloud.de?</a></p>
 <p>No Problem we got you, Welcome to the CatCloudPages!</p>
 <p> Just for a quick look, youre from </p>
-<script language="JavaScript">
-VIH_BackColor = "White";
-VIH_ForeColor = "Blue";
-VIH_FontPix = "16";
-VIH_DisplayFormat = "I like People From:<br>IP Address: %%IP%%";
-VIH_DisplayOnPage = "yes";
+<p id="gfg"> Right ?</p> 
 
-</script>
-<script language="JavaScript" src="https://raw.githubusercontent.com/KatzeMau/KatzeMau.github.io/main/visitorIPHOST.js.php"></script>
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Getting Clients IP</title> 
+	<style> 
+		p, h1 { 
+			color: green; 
+		} 
+	</style> 
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+	</script> 
+
+	<script> 
+		/* Add "https://api.ipify.org?format=json" statement 
+		this will communicate with the ipify servers in 
+		order to retrieve the IP address $.getJSON will 
+		load JSON-encoded data from the server using a 
+		GET HTTP request */ 
+
+		$.getJSON("https://api.ipify.org?format=json", 
+										function(data) { 
+
+			// Setting text of element P with id gfg 
+			$("#gfg").html(data.ip); 
+		}) 
+	</script> 
+</head> 
+
+<body> 
+	<center> 
+		<h1>GeeksforGeeks</h1> 
+		<h3>Public IP Address of user is:</h3> 
+
+		<p id="gfg"></p> 
+
+	</center> 
+</body> 
+
+</html> 
 
 
 
 <a href="mailto:Administration@thecatcloud.de">Mail for Impressum or other problems</a>
 </body>
 </html>
-
-
-
 
 
 
@@ -49,9 +80,9 @@ VIH_DisplayOnPage = "yes";
 		document.addEventListener("DOMContentLoaded", function() {
 			setTimeout(function() {
 				if (document.getElementById("wrapper").offsetHeight) {
-					document.getElementById("wrapper").innerHTML = 'No AdBlock';
+					document.getElementById("wrapper").innerHTML = 'Very good you dont have an AdBlock ;)';
 				} else {
-					document.getElementById("wrapper").innerHTML = 'AdBlock Detected';
+					document.getElementById("wrapper").innerHTML = 'AdBlock Detected :(';
 				}
 			}, 1000)
 		});
