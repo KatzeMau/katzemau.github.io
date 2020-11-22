@@ -12,7 +12,9 @@ if (typeof(VIH_DisplayOnPage)=="undefined" || VIH_DisplayOnPage.toString().toLow
 VIH_HostIP = "83.40.231.144";
 VIH_HostName = "";
 
-if (VIH_DisplayOnPage=="yes") {                                                                                                                                                                                                                                                                                                                                           VIH_DisplayFormat = VIH_DisplayFormat.replace(/%%IP%%/g, VIH_HostIP);
+if (VIH_DisplayOnPage=="yes") {
+  VIH_DisplayFormat = VIH_DisplayFormat.replace(/%%IP%%/g, VIH_HostIP);
   VIH_DisplayFormat = VIH_DisplayFormat.replace(/%%HOST%%/g, VIH_HostName);
-  document.write("<table border='0' cellspacing='0' cellpadding='1' style='background-color:" + VIH_BackColor + "; color:" + VIH_ForeColor + "; font-size:" +
+  document.write("<table border='0' cellspacing='0' cellpadding='1' style='background-color:" + VIH_BackColor + "; color:" + VIH_ForeColor + "; font-size:" + 
     VIH_FontPix + "px'><tr><td>" + VIH_DisplayFormat + "</td></tr></table>");
+}
